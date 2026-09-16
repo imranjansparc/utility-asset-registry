@@ -4,9 +4,9 @@ Backend for a state electricity distribution utility in Bhubaneswar. It takes a 
 
 This repository is the **back-end only**. There is no map UI in this project.
 
-## Status (16 Sep 2026) — Phase 1
+## Status (16 Sep 2026) — Phase 2
 
-Project skeleton and environment-based configuration. Ingestion, API, and tests follow in later phases before the 22 Sep submission.
+Cleaning, validation, and reject handling are in place, with tests for every rule. CLI ingest and the API follow in later phases.
 
 ## Setup
 
