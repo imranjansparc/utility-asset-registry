@@ -4,9 +4,9 @@ Backend for a state electricity distribution utility in Bhubaneswar. It takes a 
 
 This repository is the **back-end only**. There is no map UI in this project.
 
-## Status (17 Sep 2026) — Phase 3
+## Status (18 Sep 2026) — Phase 4
 
-The night-shift ingest command is in place. Cleaning and rejects from Phase 2 are reused. The web API follows in later phases.
+Accepted assets are stored in a database and served over HTTP. Sign-in and bulk upload follow in the next phase.
 
 ## Setup
 
@@ -57,6 +57,33 @@ Also available:
 
 If a required CSV column is missing, the run stops at once and names the missing column.
 
+## Web service
+
+```powershell
+copy .env.example .env
+uvicorn utility_asset_registry.api.app:create_app --factory --reload
+```
+
+Open http://127.0.0.1:8000/docs to see every operation and try it. The monitoring check is `GET /health` and does not require a login.
+
+| Method | Path | What it does |
+|---|---|---|
+| GET | `/health` | Confirms the application is running |
+| GET | `/assets` | List a page of assets (`limit` default 25, max 100; `offset`; filters `asset_type`, `status`, `surveyor`, `condition_min`, `condition_max`; search `q`) |
+| GET | `/assets/{code}` | Fetch one asset |
+| POST | `/assets` | Add a new asset |
+| PUT | `/assets/{code}` | Replace an asset in full |
+| PATCH | `/assets/{code}` | Correct selected fields |
+| DELETE | `/assets/{code}` | Remove an asset and its visit history |
+| GET | `/assets/{code}/visits` | Visit history for one asset |
+| GET | `/reports/summary` | Counts, averages, worst asset, map extent |
+| GET | `/reports/repairs` | In-service assets with condition below 5 |
+| GET | `/reports/most-visited` | Assets visited most often |
+| GET | `/reports/nearest?latitude=&longitude=` | Nearest surveyed asset in kilometres |
+| GET | `/reports/surveyors?date=YYYY-MM-DD` | Distinct surveyors that day |
+
+A request never returns every asset at once. Outcomes are labelled: `created`, `deleted`, `not_found`, `invalid`.
+
 ## Tests
 
 ```powershell
@@ -77,4 +104,4 @@ All runtime settings are read from the environment (`src/utility_asset_registry/
 
 ## What will run later
 
-- Web service: FastAPI, with OpenAPI docs at `/docs`
+- Sign-in (surveyor vs administrator), bulk CSV upload, cache and request limits

@@ -122,4 +122,9 @@ def run_ingest(
             rows_rejected=len(result.rejected),
             run_at=stamp,
         )
+        from utility_asset_registry.database import session_scope
+        from utility_asset_registry.persist import save_cleaned_many
+
+        with session_scope() as session:
+            save_cleaned_many(session, result.accepted)
     return IngestOutcome(result=result, paths=paths, aborted_strict=aborted)

@@ -1,0 +1,55 @@
+"""FastAPI application factory. OpenAPI lives at /docs for the map vendor."""
+
+from __future__ import annotations
+
+from contextlib import asynccontextmanager
+
+from fastapi import FastAPI, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+
+from utility_asset_registry.api.assets import router as assets_router
+from utility_asset_registry.api.errors import invalid_payload
+from utility_asset_registry.api.reports import router as reports_router
+from utility_asset_registry.database import init_db, make_engine, make_session_factory
+
+
+def create_app() -> FastAPI:
+    engine = make_engine()
+    init_db(engine)
+    factory = make_session_factory(engine)
+
+    @asynccontextmanager
+    async def lifespan(app: FastAPI):
+        app.state.engine = engine
+        app.state.session_factory = factory
+        yield
+        engine.dispose()
+
+    app = FastAPI(
+        title="Utility Asset Registry",
+        description=(
+            "Back-end for a state electricity distribution utility. "
+            "Staff and the web map load, search and update surveyed assets."
+        ),
+        version="0.1.0",
+        lifespan=lifespan,
+    )
+    app.state.engine = engine
+    app.state.session_factory = factory
+
+    @app.exception_handler(RequestValidationError)
+    async def _readable_validation(_request: Request, exc: RequestValidationError) -> JSONResponse:
+        fields: dict[str, str] = {}
+        for err in exc.errors():
+            loc = ".".join(str(part) for part in err["loc"] if part != "body")
+            fields[loc or "body"] = err["msg"]
+        return invalid_payload(fields)
+
+    @app.get("/health", tags=["status"], summary="Unprotected liveness check")
+    def health() -> dict[str, str]:
+        return {"status": "ok"}
+
+    app.include_router(assets_router)
+    app.include_router(reports_router)
+    return app
