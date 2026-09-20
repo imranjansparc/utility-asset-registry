@@ -4,6 +4,8 @@ Backend for a state electricity distribution utility in Bhubaneswar. It takes a 
 
 This repository is the **back-end only**. There is no map UI in this project.
 
+**How to operate this system:** see [OPERATOR_GUIDE.pdf](OPERATOR_GUIDE.pdf) (printable) or [OPERATOR_GUIDE.md](OPERATOR_GUIDE.md). For IT, night operator, day staff, administrator, and supervisor.
+
 ## Status (20 Sep 2026) — Phase 6 complete
 
 Ready for submission: CLI ingest, database API, JWT roles, bulk upload, CORS, 60-second summary cache, 60 requests/minute rate limit, and request timing. Sample ingest outputs are in `outputs/`.
@@ -26,27 +28,59 @@ Edit `.env` and set `JWT_SECRET`, `BOOTSTRAP_ADMIN_USERNAME`, and `BOOTSTRAP_ADM
 
 The representative handheld export is `data/survey_export.csv` (62 rows; about one in six is faulty, matching the assignment).
 
-## How to use (simple)
+Extra test files for you (developer), not for the night operator:
 
-**First time only:** double-click `setup.bat`, then open `.env` in Notepad and set the admin password.
+| File | Purpose | How to load |
+|---|---|---|
+| `data/sample_correct.csv` | All clean rows | Double-click `load_correct.bat` |
+| `data/sample_incorrect.csv` | Bad rows only | Double-click `load_incorrect.bat` |
 
-**Every day:** double-click **`run.bat`**
+`run.bat` stays for the end user only (start / load main CSV / exit).
 
-| Press | What happens |
+## How to use (simple commands)
+
+Open PowerShell, then type these three lines **once per window**:
+
+```powershell
+cd C:\Users\ranja\utility-asset-registry
+.\.venv\Scripts\Activate.ps1
+```
+
+After that, use one word:
+
+| Type this | What it does |
 |---|---|
-| `1` | Start the system → open http://127.0.0.1:8000/docs |
-| `2` | Load `data\survey_export.csv` |
-| `3` | Exit |
+| `setup` | First time only: install tools and create `.env` |
+| `load` | Load today's CSV (`data\survey_export.csv`) |
+| `start` | Start the system. Then open http://127.0.0.1:8000/docs |
+| `check` | Tell you if the system is running |
+| `rejects` | Open the bad-rows file from the last load |
+| `run` | Menu: 1 start, 2 load, 3 exit |
 
-You can also double-click `start.bat` or `ingest.bat` if you prefer separate buttons.
+```powershell
+setup
+load
+start
+check
+rejects
+run
+```
+
+If PowerShell says `start` is the wrong command, type:
+
+```powershell
+asset start
+```
+
+`asset load`, `asset check`, and `asset rejects` work the same way.
+
+**First time only:** `python -m venv .venv`, then `.\.venv\Scripts\Activate.ps1`, then `pip install -e .`, then type `setup` and set the admin password in `.env`.
 
 ## Ingestion tool
 
-**Easiest:** `run.bat` → press `2`
+**Easiest:** type `load`
 
-Or double-click `ingest.bat`.
-
-Or from PowerShell:
+Or:
 
 ```powershell
 asset-ingest data\survey_export.csv
@@ -55,6 +89,7 @@ asset-ingest data\survey_export.csv
 Or, from this folder:
 
 ```powershell
+python -m utility_asset_registry load
 python -m utility_asset_registry data\survey_export.csv
 ```
 
@@ -92,9 +127,7 @@ Result of that run: **62 read, 52 accepted, 10 rejected**.
 
 ## Web service
 
-**Easiest:** `run.bat` → press `1`, then open http://127.0.0.1:8000/docs
-
-Or double-click `start.bat`.
+**Easiest:** type `start`, then open http://127.0.0.1:8000/docs. Type `check` if you are not sure it is running.
 
 Or from PowerShell:
 

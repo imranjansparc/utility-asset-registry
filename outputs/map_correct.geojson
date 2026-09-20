@@ -1,0 +1,245 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8245,
+          20.2961
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-1001",
+        "name": "North Feeder Pole",
+        "asset_type": "pole",
+        "elevation_m": 45.2,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 9.1
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8401,
+          20.2704
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-1002",
+        "name": "South Ring Road Pole",
+        "asset_type": "pole",
+        "elevation_m": 42.0,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 8.5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8406,
+          20.2689
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-1001",
+        "name": "Master Canteen Valve",
+        "asset_type": "valve",
+        "elevation_m": 41.5,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "bore_mm": 150
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.833,
+          20.2755
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-1002",
+        "name": "Ag Square Valve",
+        "asset_type": "valve",
+        "elevation_m": 42.2,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 5,
+        "condition_band": "FAIR",
+        "attributes": {
+          "bore_mm": 100
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8362,
+          20.2725
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-1001",
+        "name": "Janpath Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 41.7,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "S. Das",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "depth_m": 2.4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8266,
+          20.2633
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-1002",
+        "name": "Forest Park Chamber",
+        "asset_type": "manhole",
+        "elevation_m": null,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "S. Das",
+        "status": "proposed",
+        "condition_score": 9,
+        "condition_band": "GOOD",
+        "attributes": {
+          "depth_m": 2.1
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8299,
+          20.2766
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-1001",
+        "name": "Unit 4 Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 42.0,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "rating_kva": 250
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8001,
+          20.2684
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-1002",
+        "name": "Baramunda Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 46.0,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "B. Sahoo",
+        "status": "decommissioned",
+        "condition_score": 1,
+        "condition_band": "CRITICAL",
+        "attributes": {
+          "rating_kva": 63
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8062,
+          20.3408
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-1003",
+        "name": "Infocity Pole",
+        "asset_type": "pole",
+        "elevation_m": 47.5,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 9,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 10.2
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.819,
+          20.301
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-1004",
+        "name": "Weak Feeder Pole",
+        "asset_type": "pole",
+        "elevation_m": 44.8,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 3,
+        "condition_band": "POOR",
+        "attributes": {
+          "height_m": 7.5
+        }
+      }
+    }
+  ]
+}

@@ -1,1 +1,7 @@
 2026-09-20T17:04:05+00:00  csv=data\survey_export.csv  status=ok  read=62  accepted=52  rejected=10  rejects=outputs\rejects.csv
+2026-09-20T17:22:29+00:00  csv=data\sample_correct.csv  status=ok  read=10  accepted=10  rejected=0  rejects=outputs\rejects_correct.csv
+2026-09-20T17:22:30+00:00  csv=data\sample_incorrect.csv  status=ok  read=13  accepted=1  rejected=12  rejects=outputs\rejects_incorrect.csv
+2026-09-20T17:23:32+00:00  csv=data\sample_correct.csv  status=ok  read=10  accepted=10  rejected=0  rejects=outputs\rejects_correct.csv
+2026-09-20T17:23:33+00:00  csv=data\sample_incorrect.csv  status=ok  read=13  accepted=1  rejected=12  rejects=outputs\rejects_incorrect.csv
+2026-09-20T18:01:02+00:00  csv=C:\Users\ranja\utility-asset-registry\data\survey_export.csv  status=ok  read=62  accepted=52  rejected=10  rejects=outputs\rejects.csv
+2026-09-20T18:02:16+00:00  csv=C:\Users\ranja\utility-asset-registry\data\survey_export.csv  status=ok  read=62  accepted=52  rejected=10  rejects=outputs\rejects.csv

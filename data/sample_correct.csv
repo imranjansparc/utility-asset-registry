@@ -1,0 +1,11 @@
+asset_id,name,asset_type,latitude,longitude,elevation_m,surveyed_on,surveyor,status,condition_score,attribute_json
+PL-1001,North feeder pole,pole,20.2961,85.8245,45.2,2026-09-10,A. Patnaik,active,8,"{""height_m"": 9.1}"
+PL-1002,South ring road pole,pole,20.2704,85.8401,42.0,2026-09-10,A. Patnaik,active,6,"{""height_m"": 8.5}"
+VL-1001,Master canteen valve,valve,20.2689,85.8406,41.5,2026-09-11,R. K. Mishra,active,7,"{""bore_mm"": 150}"
+VL-1002,AG square valve,valve,20.2755,85.8330,42.2,2026-09-11,R. K. Mishra,active,5,"{""bore_mm"": 100}"
+MH-1001,Janpath chamber,manhole,20.2725,85.8362,41.7,2026-09-12,S. Das,active,6,"{""depth_m"": 2.4}"
+MH-1002,Forest park chamber,manhole,20.2633,85.8266,,2026-09-12,S. Das,proposed,9,"{""depth_m"": 2.1}"
+TR-1001,Unit 4 transformer,transformer,20.2766,85.8299,42.0,2026-09-13,L. Jena,active,8,"{""rating_kva"": 250}"
+TR-1002,Baramunda transformer,transformer,20.2684,85.8001,46.0,2026-09-13,B. Sahoo,decommissioned,1,"{""rating_kva"": 63}"
+PL-1003,Infocity pole,pole,20.3408,85.8062,47.5,2026-09-14,A. Patnaik,active,9,"{""height_m"": 10.2}"
+PL-1004,Weak feeder pole,pole,20.3010,85.8190,44.8,2026-09-14,B. Sahoo,active,3,"{""height_m"": 7.5}"

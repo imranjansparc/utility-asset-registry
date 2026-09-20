@@ -1,0 +1,29 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8245,
+          20.2961
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-2001",
+        "name": "Duplicate Will Appear Twice",
+        "asset_type": "pole",
+        "elevation_m": 45.0,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 9.0
+        }
+      }
+    }
+  ]
+}
