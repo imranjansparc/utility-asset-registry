@@ -19,6 +19,7 @@ from utility_asset_registry.api.schemas import (
     payload_to_row,
     visit_to_out,
 )
+from utility_asset_registry.cache import invalidate_summary_cache
 from utility_asset_registry.models import User
 from utility_asset_registry.persist import (
     DEFAULT_PAGE_SIZE,
@@ -99,6 +100,7 @@ def add_asset(payload: AssetIn, session: Session = Depends(get_db)):
         )
     asset = save_cleaned(session, to_cleaned_record(row))
     session.flush()
+    invalidate_summary_cache()
     return created({"asset": asset_to_out(asset).model_dump(mode="json")})
 
 
@@ -117,6 +119,7 @@ def replace_asset(asset_id: str, payload: AssetIn, session: Session = Depends(ge
         return invalid_payload(fields_from_reasons(reasons))
     updated = save_cleaned(session, to_cleaned_record(row))
     session.flush()
+    invalidate_summary_cache()
     return {"outcome": "replaced", "asset": asset_to_out(updated).model_dump(mode="json")}
 
 
@@ -141,6 +144,7 @@ def patch_asset(asset_id: str, payload: AssetPatch, session: Session = Depends(g
         add_visit=bool(survey_fields & set(updates)),
     )
     session.flush()
+    invalidate_summary_cache()
     return {"outcome": "corrected", "asset": asset_to_out(updated).model_dump(mode="json")}
 
 
@@ -155,6 +159,7 @@ def remove_asset(
         return not_found(asset_id)
     delete_asset(session, asset)
     session.flush()
+    invalidate_summary_cache()
     return deleted(asset_id)
 
 

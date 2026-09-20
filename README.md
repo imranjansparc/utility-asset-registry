@@ -4,9 +4,9 @@ Backend for a state electricity distribution utility in Bhubaneswar. It takes a 
 
 This repository is the **back-end only**. There is no map UI in this project.
 
-## Status (20 Sep 2026) — Phase 5
+## Status (20 Sep 2026) — Phase 6 complete
 
-Sign-in (JWT), surveyor vs administrator roles, admin bulk CSV upload, and CORS for the web map are in place. Cache and request limits follow in Phase 6.
+Ready for submission: CLI ingest, database API, JWT roles, bulk upload, CORS, 60-second summary cache, 60 requests/minute rate limit, and request timing. Sample ingest outputs are in `outputs/`.
 
 ## Setup
 
@@ -59,6 +59,19 @@ Also available:
 
 If a required CSV column is missing, the run stops at once and names the missing column.
 
+### Sample ingest outputs
+
+One run against `data/survey_export.csv` is committed under `outputs/`:
+
+| File | Contents |
+|---|---|
+| `outputs/rejects.csv` | Refused rows with original values plus `reason` |
+| `outputs/assets.geojson` | Accepted assets as a GeoJSON FeatureCollection |
+| `outputs/summary.txt` | Printable supervisor summary |
+| `outputs/ingest.log` | Dated line for the run |
+
+Result of that run: **62 read, 52 accepted, 10 rejected**.
+
 ## Web service
 
 ```powershell
@@ -85,7 +98,7 @@ Roles:
 
 | Method | Path | Who | What it does |
 |---|---|---|---|
-| GET | `/health` | anyone | Confirms the application is running |
+| GET | `/health` | anyone | Confirms the application is running (exempt from rate limit) |
 | POST | `/auth/login` | anyone | Sign in and receive a bearer token |
 | POST | `/auth/users` | admin | Create a surveyor or administrator |
 | GET | `/assets` | signed-in | List a page of assets (`limit` default 25, max 100; filters and `q`) |
@@ -95,14 +108,21 @@ Roles:
 | PATCH | `/assets/{code}` | signed-in | Correct selected fields |
 | DELETE | `/assets/{code}` | admin | Remove an asset and its visit history |
 | GET | `/assets/{code}/visits` | signed-in | Visit history for one asset |
-| GET | `/reports/summary` | signed-in | Counts, averages, worst asset, map extent |
+| GET | `/reports/summary` | signed-in | Counts, averages, worst asset, map extent (cached up to 60 s) |
 | GET | `/reports/repairs` | signed-in | In-service assets with condition below 5 |
 | GET | `/reports/most-visited` | signed-in | Assets visited most often |
 | GET | `/reports/nearest?latitude=&longitude=` | signed-in | Nearest surveyed asset in kilometres |
 | GET | `/reports/surveyors?date=YYYY-MM-DD` | signed-in | Distinct surveyors that day |
 | POST | `/ingest/upload` | admin | Upload a day's CSV; returns accepted and rejected counts |
 
-Outcomes are labelled: `created`, `deleted`, `not_found`, `invalid`, `unauthenticated`, `not_permitted`. CORS allows only the origins in `CORS_ORIGINS` (the web map), not every address.
+Outcomes are labelled: `created`, `deleted`, `not_found`, `invalid`, `unauthenticated`, `not_permitted`, `rate_limited`.
+
+### Reliability features
+
+- **Summary cache** — `/reports/summary` is cached for up to 60 seconds. The cache is dropped immediately when any asset is added, corrected, replaced, deleted, or bulk-uploaded. The response includes `"cached": true|false`.
+- **Rate limit** — each caller is limited to `RATE_LIMIT_PER_MINUTE` requests (default 60). Beyond that the API returns 429 with `retry_after_seconds` and a `Retry-After` header. `/health` is exempt.
+- **Request timing** — every response includes `X-Response-Time-Ms`. The same duration is written to the application log.
+- **CORS** — only origins listed in `CORS_ORIGINS` (the web map), not every address.
 
 ## Tests
 
@@ -120,10 +140,15 @@ All runtime settings are read from the environment (`src/utility_asset_registry/
 | `JWT_SECRET` | Signing secret for login credentials (never commit a real value) |
 | `JWT_EXPIRE_MINUTES` | How long a sign-in credential lasts |
 | `CORS_ORIGINS` | Comma-separated addresses allowed to call the API (the web map) |
-| `RATE_LIMIT_PER_MINUTE` | Maximum requests from one caller |
+| `RATE_LIMIT_PER_MINUTE` | Maximum requests from one caller per minute |
 | `BOOTSTRAP_ADMIN_USERNAME` | First administrator username, created on startup if missing |
 | `BOOTSTRAP_ADMIN_PASSWORD` | First administrator password (never commit a real value) |
 
-## What will run later
+## Demo checklist (5–8 minutes)
 
-- Summary cache (60 seconds), 60 requests/minute rate limit, request timing in logs and responses
+1. CLI ingest rejects bad rows and continues (`asset-ingest data\survey_export.csv`).
+2. Open `/docs` and show the published operations.
+3. Sign in, then make a successful authenticated request.
+4. Sign in as a surveyor and show delete refused (`not_permitted`).
+5. Call `/reports/summary` twice (second shows `"cached": true`), then change an asset and show the next summary is fresh.
+6. Lower `RATE_LIMIT_PER_MINUTE` (or hammer the API) and show a 429 with retry guidance.

@@ -1,0 +1,13 @@
+Utility Asset Registry — survey ingest
+Run at: 2026-09-20 17:04:05+00:00
+
+Type             Count   Avg condition           Worst asset
+manhole             10             5.8           MH-0005 (0)
+pole                20             6.2           PL-0005 (1)
+transformer         12             5.8           TR-0005 (1)
+valve               10             6.2           VL-0004 (2)
+
+Survey extent (bounding box the web map should open on):
+  south=20.161000  north=20.400500  west=85.707500  east=85.890100
+
+Totals: 62 read, 52 accepted, 10 rejected

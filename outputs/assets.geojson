@@ -1,0 +1,1255 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8245,
+          20.2961
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0001",
+        "name": "North Feeder Pole",
+        "asset_type": "pole",
+        "elevation_m": 45.2,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 9.1,
+          "material": "concrete"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8401,
+          20.2704
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0002",
+        "name": "South Ring Road Pole",
+        "asset_type": "pole",
+        "elevation_m": 42.0,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A Patnaik",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 8.5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8238,
+          20.353
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0003",
+        "name": "Patia Junction Pole",
+        "asset_type": "pole",
+        "elevation_m": null,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A Patnaik",
+        "status": "active",
+        "condition_score": 4,
+        "condition_band": "POOR",
+        "attributes": {
+          "height_m": 7.8
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8122,
+          20.2845
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0004",
+        "name": "Nayapalli Feeder Pole",
+        "asset_type": "pole",
+        "elevation_m": 44.1,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 9,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 10.0,
+          "material": "steel"
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.834,
+          20.241
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0005",
+        "name": "Old Town Pole",
+        "asset_type": "pole",
+        "elevation_m": 38.6,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "R K Mishra",
+        "status": "decommissioned",
+        "condition_score": 1,
+        "condition_band": "CRITICAL",
+        "attributes": {
+          "height_m": 6.2
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.818,
+          20.3301
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0006",
+        "name": "Chandrasekharpur Pole",
+        "asset_type": "pole",
+        "elevation_m": 46.8,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "S. Das",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 9.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.7785,
+          20.2622
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0007",
+        "name": "Khandagiri Pole",
+        "asset_type": "pole",
+        "elevation_m": 51.3,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "S. Das",
+        "status": "proposed",
+        "condition_score": 10,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 11.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8415,
+          20.292
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0008",
+        "name": "Vani Vihar Pole",
+        "asset_type": "pole",
+        "elevation_m": 43.0,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 5,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 8.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.845,
+          20.2888
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0009",
+        "name": "Saheed Nagar Pole",
+        "asset_type": "pole",
+        "elevation_m": 42.7,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 3,
+        "condition_band": "POOR",
+        "attributes": {
+          "height_m": 7.5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.862,
+          20.268
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0010",
+        "name": "Rasulgarh Pole",
+        "asset_type": "pole",
+        "elevation_m": 40.2,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 9.4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8555,
+          20.3015
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0011",
+        "name": "Cuttack Road Pole",
+        "asset_type": "pole",
+        "elevation_m": 41.9,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 8.8
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8175,
+          20.254
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0012",
+        "name": "Airport Approach Pole",
+        "asset_type": "pole",
+        "elevation_m": 39.4,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 2,
+        "condition_band": "CRITICAL",
+        "attributes": {
+          "height_m": 7.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8062,
+          20.3408
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0013",
+        "name": "Infocity Pole",
+        "asset_type": "pole",
+        "elevation_m": 47.5,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "S. Das",
+        "status": "active",
+        "condition_score": 9,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 10.2
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.819,
+          20.301
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0014",
+        "name": "Jaydev Vihar Pole",
+        "asset_type": "pole",
+        "elevation_m": 44.8,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 8.6
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8333,
+          20.2708
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0015",
+        "name": "Unit 1 Market Pole",
+        "asset_type": "pole",
+        "elevation_m": 41.1,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 9.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.828,
+          20.2655
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0016",
+        "name": "Bapuji Nagar Pole",
+        "asset_type": "pole",
+        "elevation_m": 40.8,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 4,
+        "condition_band": "POOR",
+        "attributes": {
+          "height_m": 7.9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8488,
+          20.2558
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0017",
+        "name": "Laxmisagar Pole",
+        "asset_type": "pole",
+        "elevation_m": 39.0,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 5,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 8.2
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8584,
+          20.2782
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0018",
+        "name": "Bomikhal Pole",
+        "asset_type": "pole",
+        "elevation_m": 41.6,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "S. Das",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 8.4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.821,
+          20.2388
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0019",
+        "name": "Sundarpada Pole",
+        "asset_type": "pole",
+        "elevation_m": 37.2,
+        "surveyed_on": "2026-09-15",
+        "surveyor": "R. K. Mishra",
+        "status": "proposed",
+        "condition_score": 10,
+        "condition_band": "GOOD",
+        "attributes": {
+          "height_m": 11.5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.7704,
+          20.2585
+        ]
+      },
+      "properties": {
+        "asset_id": "PL-0020",
+        "name": "Ghatikia Pole",
+        "asset_type": "pole",
+        "elevation_m": 52.1,
+        "surveyed_on": "2026-09-15",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "height_m": 9.3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8406,
+          20.2689
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0001",
+        "name": "Master Canteen Valve",
+        "asset_type": "valve",
+        "elevation_m": 41.5,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "bore_mm": 150
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.833,
+          20.2755
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0002",
+        "name": "Ag Square Valve",
+        "asset_type": "valve",
+        "elevation_m": 42.2,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 3,
+        "condition_band": "POOR",
+        "attributes": {
+          "bore_mm": 100
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8419,
+          20.2496
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0003",
+        "name": "Kalpana Square Valve",
+        "asset_type": "valve",
+        "elevation_m": null,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "S. Das",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "bore_mm": 200
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.831,
+          20.2712
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0004",
+        "name": "Rajmahal Valve",
+        "asset_type": "valve",
+        "elevation_m": 41.8,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "L. Jena",
+        "status": "decommissioned",
+        "condition_score": 2,
+        "condition_band": "CRITICAL",
+        "attributes": {
+          "bore_mm": 80
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8188,
+          20.2968
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0005",
+        "name": "Crp Square Valve",
+        "asset_type": "valve",
+        "elevation_m": 45.0,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 9,
+        "condition_band": "GOOD",
+        "attributes": {
+          "bore_mm": 250
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8312,
+          20.3095
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0006",
+        "name": "Sainik School Valve",
+        "asset_type": "valve",
+        "elevation_m": 44.4,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 5,
+        "condition_band": "FAIR",
+        "attributes": {
+          "bore_mm": 150
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8195,
+          20.322
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0007",
+        "name": "Nalco Square Valve",
+        "asset_type": "valve",
+        "elevation_m": 46.1,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "bore_mm": 300
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.823,
+          20.2914
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0008",
+        "name": "Kalinga Stadium Valve",
+        "asset_type": "valve",
+        "elevation_m": 44.0,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "S. Das",
+        "status": "proposed",
+        "condition_score": 10,
+        "condition_band": "GOOD",
+        "attributes": {
+          "bore_mm": 200
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8377,
+          20.2801
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0009",
+        "name": "Delta Square Valve",
+        "asset_type": "valve",
+        "elevation_m": 42.6,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 4,
+        "condition_band": "POOR",
+        "attributes": {
+          "bore_mm": 125
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8448,
+          20.2664
+        ]
+      },
+      "properties": {
+        "asset_id": "VL-0010",
+        "name": "Fire Station Valve",
+        "asset_type": "valve",
+        "elevation_m": 41.0,
+        "surveyed_on": "2026-09-15",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "bore_mm": 150
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8362,
+          20.2725
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0001",
+        "name": "Janpath Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 41.7,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "depth_m": 2.4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8388,
+          20.2502
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0002",
+        "name": "Lewis Road Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 39.8,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 3,
+        "condition_band": "POOR",
+        "attributes": {
+          "depth_m": 1.8
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8266,
+          20.2633
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0003",
+        "name": "Forest Park Chamber",
+        "asset_type": "manhole",
+        "elevation_m": null,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "S. Das",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "depth_m": 2.1
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8125,
+          20.3077
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0004",
+        "name": "Irc Village Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 45.6,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "depth_m": 2.6
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.7902,
+          20.2448
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0005",
+        "name": "Dumduma Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 48.0,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "B. Sahoo",
+        "status": "decommissioned",
+        "condition_score": 0,
+        "condition_band": "CRITICAL",
+        "attributes": {
+          "depth_m": 1.5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.7755,
+          20.239
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0006",
+        "name": "Patrapada Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 50.4,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 5,
+        "condition_band": "FAIR",
+        "attributes": {
+          "depth_m": 2.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8144,
+          20.3355
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0007",
+        "name": "Sailashree Vihar Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 47.2,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 9,
+        "condition_band": "GOOD",
+        "attributes": {
+          "depth_m": 2.8
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.821,
+          20.3488
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0008",
+        "name": "Niladri Vihar Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 46.9,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "S. Das",
+        "status": "proposed",
+        "condition_score": 10,
+        "condition_band": "GOOD",
+        "attributes": {
+          "depth_m": 3.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8588,
+          20.3102
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0009",
+        "name": "Mancheswar Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 42.3,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 4,
+        "condition_band": "POOR",
+        "attributes": {
+          "depth_m": 1.9
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8495,
+          20.2988
+        ]
+      },
+      "properties": {
+        "asset_id": "MH-0010",
+        "name": "Vss Nagar Chamber",
+        "asset_type": "manhole",
+        "elevation_m": 43.1,
+        "surveyed_on": "2026-09-15",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "depth_m": 2.2
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8299,
+          20.2766
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0001",
+        "name": "Unit 4 Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 42.0,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "rating_kva": 250
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8422,
+          20.2618
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0002",
+        "name": "Bjb College Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 40.5,
+        "surveyed_on": "2026-09-10",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 4,
+        "condition_band": "POOR",
+        "attributes": {
+          "rating_kva": 100
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8194,
+          20.3548
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0003",
+        "name": "Kiit Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 48.2,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "S. Das",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "rating_kva": 500
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.7888,
+          20.2315
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0004",
+        "name": "Aiims Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 49.6,
+        "surveyed_on": "2026-09-11",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 9,
+        "condition_band": "GOOD",
+        "attributes": {
+          "rating_kva": 630
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8001,
+          20.2684
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0005",
+        "name": "Baramunda Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 46.0,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "B. Sahoo",
+        "status": "decommissioned",
+        "condition_score": 1,
+        "condition_band": "CRITICAL",
+        "attributes": {
+          "rating_kva": 63
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.7908,
+          20.3602
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0006",
+        "name": "Chandaka Transformer",
+        "asset_type": "transformer",
+        "elevation_m": null,
+        "surveyed_on": "2026-09-12",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 6,
+        "condition_band": "FAIR",
+        "attributes": {
+          "rating_kva": 315
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.7075,
+          20.161
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0007",
+        "name": "Jatni Feeder Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 55.4,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 5,
+        "condition_band": "FAIR",
+        "attributes": {
+          "rating_kva": 200
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8218,
+          20.4005
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0008",
+        "name": "Nandankanan Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 44.7,
+        "surveyed_on": "2026-09-13",
+        "surveyor": "S. Das",
+        "status": "proposed",
+        "condition_score": 10,
+        "condition_band": "GOOD",
+        "attributes": {
+          "rating_kva": 400
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8602,
+          20.3058
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0009",
+        "name": "Cuttack Road Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 41.4,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "L. Jena",
+        "status": "active",
+        "condition_score": 3,
+        "condition_band": "POOR",
+        "attributes": {
+          "rating_kva": 160
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8901,
+          20.3255
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0010",
+        "name": "Pahala Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 40.0,
+        "surveyed_on": "2026-09-14",
+        "surveyor": "B. Sahoo",
+        "status": "active",
+        "condition_score": 8,
+        "condition_band": "GOOD",
+        "attributes": {
+          "rating_kva": 250
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.872,
+          20.3188
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0011",
+        "name": "Hanspal Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 40.9,
+        "surveyed_on": "2026-09-15",
+        "surveyor": "A. Patnaik",
+        "status": "active",
+        "condition_score": 7,
+        "condition_band": "FAIR",
+        "attributes": {
+          "rating_kva": 200
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.8544,
+          20.2266
+        ]
+      },
+      "properties": {
+        "asset_id": "TR-0012",
+        "name": "Sisupalgarh Transformer",
+        "asset_type": "transformer",
+        "elevation_m": 38.8,
+        "surveyed_on": "2026-09-15",
+        "surveyor": "R. K. Mishra",
+        "status": "active",
+        "condition_score": 2,
+        "condition_band": "CRITICAL",
+        "attributes": {
+          "rating_kva": 100
+        }
+      }
+    }
+  ]
+}

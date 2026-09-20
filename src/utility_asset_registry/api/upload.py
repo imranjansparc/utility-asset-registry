@@ -10,6 +10,7 @@ from sqlalchemy.orm import Session
 
 from utility_asset_registry.api.deps import get_db, require_admin
 from utility_asset_registry.api.errors import invalid_payload
+from utility_asset_registry.cache import invalidate_summary_cache
 from utility_asset_registry.models import User
 from utility_asset_registry.persist import save_cleaned_many
 from utility_asset_registry.pipeline import MissingColumnsError, process_csv
@@ -41,6 +42,7 @@ def upload_csv(
 
     save_cleaned_many(session, result.accepted)
     session.flush()
+    invalidate_summary_cache()
     return {
         "rows_read": result.rows_read,
         "accepted": len(result.accepted),

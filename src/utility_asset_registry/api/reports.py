@@ -9,9 +9,10 @@ from sqlalchemy.orm import Session
 
 from utility_asset_registry.api.deps import get_current_user, get_db
 from utility_asset_registry.api.schemas import asset_to_out
-from utility_asset_registry.geo import bounding_box, nearest_asset
+from utility_asset_registry.cache import get_summary
+from utility_asset_registry.geo import nearest_asset
 from utility_asset_registry.persist import all_cleaned, most_visited
-from utility_asset_registry.reports import assets_needing_repair, surveyors_on, type_stats
+from utility_asset_registry.reports import assets_needing_repair, surveyors_on
 
 router = APIRouter(
     prefix="/reports",
@@ -22,29 +23,8 @@ router = APIRouter(
 
 @router.get("/summary")
 def summary_report(session: Session = Depends(get_db)) -> dict:
-    records = all_cleaned(session)
-    extent = bounding_box(records)
-    return {
-        "by_type": [
-            {
-                "asset_type": item.asset_type,
-                "count": item.count,
-                "average_condition": item.average_condition,
-                "worst_asset_id": item.worst_asset_id,
-                "worst_condition": item.worst_condition,
-            }
-            for item in type_stats(records)
-        ],
-        "extent": None
-        if extent is None
-        else {
-            "south": extent.south,
-            "north": extent.north,
-            "west": extent.west,
-            "east": extent.east,
-        },
-        "total": len(records),
-    }
+    """Figures for the web map. Cached up to 60 seconds; dropped on any write."""
+    return get_summary(session)
 
 
 @router.get("/repairs")

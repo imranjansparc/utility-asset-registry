@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import logging
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
@@ -15,15 +16,22 @@ from utility_asset_registry.api.errors import invalid_payload
 from utility_asset_registry.api.reports import router as reports_router
 from utility_asset_registry.api.upload import router as upload_router
 from utility_asset_registry.auth import AuthError, bootstrap_admin
+from utility_asset_registry.cache import invalidate_summary_cache
 from utility_asset_registry.config import get_settings
 from utility_asset_registry.database import init_db, make_engine, make_session_factory
+from utility_asset_registry.middleware import RateLimitMiddleware, RequestTimingMiddleware
 
 
 def create_app() -> FastAPI:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+    )
     settings = get_settings()
     engine = make_engine()
     init_db(engine)
     factory = make_session_factory(engine)
+    invalidate_summary_cache()
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
@@ -49,6 +57,9 @@ def create_app() -> FastAPI:
     app.state.engine = engine
     app.state.session_factory = factory
 
+    # Outer middleware runs first on the way in. Timing should wrap everything.
+    app.add_middleware(RequestTimingMiddleware)
+    app.add_middleware(RateLimitMiddleware)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=settings.cors_origin_list,

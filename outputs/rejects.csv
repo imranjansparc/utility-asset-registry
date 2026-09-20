@@ -1,0 +1,11 @@
+asset_id,name,asset_type,latitude,longitude,elevation_m,surveyed_on,surveyor,status,condition_score,attribute_json,reason
+PL-0001,Duplicate north feeder pole,pole,20.2962,85.8246,45.0,2026-09-16,A. Patnaik,active,8,"{""height_m"": 9.1}",asset_id 'PL-0001' is duplicated
+,Unmarked chamber near market,manhole,20.2700,85.8400,41.0,2026-09-10,S. Das,active,5,"{""depth_m"": 2.0}",asset_id is missing
+pl-0142,Bad code format pole,pole,20.2800,85.8300,42.0,2026-09-10,L. Jena,active,6,"{""height_m"": 8.0}","asset_id 'pl-0142' does not match the required format AA-0000 (two capital letters, a hyphen, four digits)"
+PL-0099,Latitude out of range pole,pole,95.0000,85.8245,40.0,2026-09-10,B. Sahoo,active,7,"{""height_m"": 8.0}",latitude 95.0 is outside the range -90 to 90
+PL-0098,Non numeric longitude pole,pole,20.2900,east of temple,41.0,2026-09-10,A. Patnaik,active,7,"{""height_m"": 8.0}",longitude 'east of temple' is not a number
+PL-0097,Overscored condition pole,pole,20.2910,85.8250,41.0,2026-09-10,R. K. Mishra,active,14,"{""height_m"": 8.0}",condition_score '14' must be a whole number from 0 to 10
+PL-0096,Blank condition pole,pole,20.2920,85.8260,41.0,2026-09-10,S. Das,active,,"{""height_m"": 8.0}",condition_score is missing
+PL-0095,Future dated pole,pole,20.2930,85.8270,41.0,2027-03-01,L. Jena,active,8,"{""height_m"": 8.0}",surveyed_on '2027-03-01' is in the future
+PL-0094,Broken json pole,pole,20.2940,85.8280,41.0,2026-09-10,B. Sahoo,active,8,{height: 9,attribute_json is not valid JSON
+PL-0093,Unknown type pump house,pump,20.2950,85.8290,41.0,2026-09-10,A. Patnaik,active,8,"{""rating_kva"": 50}","asset_type 'pump' is not recognised; must be one of: manhole, pole, transformer, valve"
