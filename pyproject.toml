@@ -22,6 +22,13 @@ dependencies = [
 
 [project.scripts]
 asset-ingest = "utility_asset_registry.cli:run"
+asset = "utility_asset_registry.cli:operator_main"
+load = "utility_asset_registry.cli:load_main"
+start = "utility_asset_registry.cli:start_main"
+run = "utility_asset_registry.cli:menu_main"
+setup = "utility_asset_registry.cli:setup_main"
+check = "utility_asset_registry.cli:check_main"
+rejects = "utility_asset_registry.cli:rejects_main"
 
 [project.optional-dependencies]
 dev = [

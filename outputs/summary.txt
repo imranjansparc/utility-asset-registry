@@ -1,5 +1,5 @@
 Utility Asset Registry — survey ingest
-Run at: 2026-09-20 17:04:05+00:00
+Run at: 2026-09-20 18:59:02+00:00
 
 Type             Count   Avg condition           Worst asset
 manhole             10             5.8           MH-0005 (0)
