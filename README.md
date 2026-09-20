@@ -26,9 +26,27 @@ Edit `.env` and set `JWT_SECRET`, `BOOTSTRAP_ADMIN_USERNAME`, and `BOOTSTRAP_ADM
 
 The representative handheld export is `data/survey_export.csv` (62 rows; about one in six is faulty, matching the assignment).
 
+## How to use (simple)
+
+**First time only:** double-click `setup.bat`, then open `.env` in Notepad and set the admin password.
+
+**Every day:** double-click **`run.bat`**
+
+| Press | What happens |
+|---|---|
+| `1` | Start the system → open http://127.0.0.1:8000/docs |
+| `2` | Load `data\survey_export.csv` |
+| `3` | Exit |
+
+You can also double-click `start.bat` or `ingest.bat` if you prefer separate buttons.
+
 ## Ingestion tool
 
-One command. The operator does not need to know Python.
+**Easiest:** `run.bat` → press `2`
+
+Or double-click `ingest.bat`.
+
+Or from PowerShell:
 
 ```powershell
 asset-ingest data\survey_export.csv
@@ -73,6 +91,12 @@ One run against `data/survey_export.csv` is committed under `outputs/`:
 Result of that run: **62 read, 52 accepted, 10 rejected**.
 
 ## Web service
+
+**Easiest:** `run.bat` → press `1`, then open http://127.0.0.1:8000/docs
+
+Or double-click `start.bat`.
+
+Or from PowerShell:
 
 ```powershell
 copy .env.example .env
