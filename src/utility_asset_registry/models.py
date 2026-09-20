@@ -49,3 +49,14 @@ class Visit(Base):
     notes: Mapped[str | None] = mapped_column(String(240), nullable=True)
 
     asset: Mapped[Asset] = relationship(back_populates="visits")
+
+
+class User(Base):
+    __tablename__ = "users"
+    __table_args__ = (UniqueConstraint("username", name="uq_users_username"),)
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    username: Mapped[str] = mapped_column(String(80), index=True)
+    password_hash: Mapped[str] = mapped_column(String(255))
+    role: Mapped[str] = mapped_column(String(20), index=True)
+

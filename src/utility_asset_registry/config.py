@@ -24,6 +24,8 @@ class Settings(BaseSettings):
     jwt_expire_minutes: int = 60
     cors_origins: str = "http://localhost:5173"
     rate_limit_per_minute: int = 60
+    bootstrap_admin_username: str = ""
+    bootstrap_admin_password: str = ""
 
     @property
     def cors_origin_list(self) -> list[str]:

@@ -38,6 +38,20 @@ def deleted(asset_id: str) -> JSONResponse:
     )
 
 
+def forbidden(message: str = "You are not permitted to do that") -> JSONResponse:
+    return JSONResponse(
+        status_code=403,
+        content={"outcome": "not_permitted", "message": message},
+    )
+
+
+def unauthenticated(message: str = "Sign in is required") -> JSONResponse:
+    return JSONResponse(
+        status_code=401,
+        content={"outcome": "unauthenticated", "message": message},
+    )
+
+
 def fields_from_reasons(reasons: list[str]) -> dict[str, str]:
     fields: dict[str, str] = {}
     for reason in reasons:

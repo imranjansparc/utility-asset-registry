@@ -7,13 +7,17 @@ from datetime import date
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
-from utility_asset_registry.api.deps import get_db
+from utility_asset_registry.api.deps import get_current_user, get_db
 from utility_asset_registry.api.schemas import asset_to_out
 from utility_asset_registry.geo import bounding_box, nearest_asset
 from utility_asset_registry.persist import all_cleaned, most_visited
 from utility_asset_registry.reports import assets_needing_repair, surveyors_on, type_stats
 
-router = APIRouter(prefix="/reports", tags=["reports"])
+router = APIRouter(
+    prefix="/reports",
+    tags=["reports"],
+    dependencies=[Depends(get_current_user)],
+)
 
 
 @router.get("/summary")

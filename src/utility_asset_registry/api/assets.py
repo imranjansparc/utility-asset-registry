@@ -6,7 +6,7 @@ from fastapi import APIRouter, Depends, Query
 from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 
-from utility_asset_registry.api.deps import get_db
+from utility_asset_registry.api.deps import get_current_user, get_db, require_admin
 from utility_asset_registry.api.errors import created, deleted, fields_from_reasons, invalid_payload, not_found
 from utility_asset_registry.api.schemas import (
     AssetIn,
@@ -19,6 +19,7 @@ from utility_asset_registry.api.schemas import (
     payload_to_row,
     visit_to_out,
 )
+from utility_asset_registry.models import User
 from utility_asset_registry.persist import (
     DEFAULT_PAGE_SIZE,
     MAX_PAGE_SIZE,
@@ -30,7 +31,11 @@ from utility_asset_registry.persist import (
 )
 from utility_asset_registry.validation import collect_row_errors, to_cleaned_record
 
-router = APIRouter(prefix="/assets", tags=["assets"])
+router = APIRouter(
+    prefix="/assets",
+    tags=["assets"],
+    dependencies=[Depends(get_current_user)],
+)
 
 
 def _validate_row(row: dict[str, str]) -> list[str]:
@@ -140,7 +145,11 @@ def patch_asset(asset_id: str, payload: AssetPatch, session: Session = Depends(g
 
 
 @router.delete("/{asset_id}")
-def remove_asset(asset_id: str, session: Session = Depends(get_db)):
+def remove_asset(
+    asset_id: str,
+    session: Session = Depends(get_db),
+    _: User = Depends(require_admin),
+):
     asset = get_by_code(session, asset_id)
     if asset is None:
         return not_found(asset_id)
